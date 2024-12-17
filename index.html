@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+        /* Ensure all images are responsive and fit within their containers */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .section__pic-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            height: 300px; /* Adjust height as needed */
+            width: 300px; /* Adjust width for proportions */
+            border-radius: 50%; /* Optional: circular style */
+            margin: 0 auto; /* Center align */
+        }
+
+            .section__pic-container img {
+                object-fit: cover; /* Ensures the image fills the container */
+                object-position: center; /* Focuses on the center of the image */
+                width: 100%;
+                height: 100%;
+            }
+
+        .about-pic {
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+
+        .icon {
+            max-width: 50px; /* Restrict icon size */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Desktop Navigation -->
+    <nav id="desktop-nav">
+        <div class="logo">Imaad Kajee</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hamburger Navigation -->
+    <nav id="hamburger-nav">
+        <div class="logo">Imaad Kajee</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/ii.png" alt="Imaad Kajee Profile Picture" />
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Imaad Kajee</h1>
+            <p class="section__text__p2">Aspiring Software Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2"
+                        onclick="window.open('./assets/CV.pdf')">
+                    Download CV
+                </button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png"
+                     alt="LinkedIn Profile"
+                     class="icon"
+                     onclick="location.href='https://www.linkedin.com/in/imaad-kajee-aa557026a/'" />
+                <img src="./assets/github.png"
+                     alt="GitHub Profile"
+                     class="icon"
+                     onclick="location.href='https://github.com/imaadkajee?tab=repositories'" />
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience.png"
+                             alt="Experience Icon"
+                             class="icon" />
+                        <h3>Experience</h3>
+                        <p></p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png"
+                             alt="Education Icon"
+                             class="icon" />
+                        <h3>Education</h3>
+                        <p>
+                            B.Sc. in Computer and Information Science
+                            IIE Varsity College<br />
+                        </p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                        Hello! My name is Imaad Kajee, a motivated Computer Science student
+                        with a passion for sports and a solid foundation in Mobile App
+                        Development, Cybersecurity, Programming Languages, and Software
+                        Development. When I'm not coding, I enjoy exploring new
+                        technologies, playing sports, and spending time with family and
+                        friends.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png"
+             alt="Arrow Icon"
+             class="icon arrow"
+             onclick="location.href='./#experience'" />
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <!-- Frontend Experience -->
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Programming Language </h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="HTML Icon" class="icon" />
+                            <div>
+                                <h3>Java</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="HTML Icon" class="icon" />
+                            <div>
+                                <h3>Kotlin</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="HTML Icon" class="icon" />
+                            <div>
+                                <h3>C#</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="CSS Icon" class="icon" />
+                            <div>
+                                <h3>CSS</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <!-- Add more skills here -->
+                    </div>
+                </div>
+
+                <!-- Backend Experience -->
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Web Development & Cloud</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/checkmark.png"
+                                 alt="Node JS Icon"
+                                 class="icon" />
+                            <div>
+                                <h3>ASP.NET MVC</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png"
+                                 alt="Node JS Icon"
+                                 class="icon" />
+                            <div>
+                                <h3>Microsoft Azure</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png"
+                                 alt="Node JS Icon"
+                                 class="icon" />
+                            <div>
+                                <h3>S.Q.L</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png"
+                                 alt="Node JS Icon"
+                                 class="icon" />
+                            <div>
+                                <h3>Firebase</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png"
+                                 alt="Express JS Icon"
+                                 class="icon" />
+                            <div>
+                                <h3>Express JS</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png"
+             alt="Arrow Icon"
+             class="icon arrow"
+             onclick="location.href='./#projects'" />
+    </section>
+
+    <section id="experience">
+        <p class="section__text__p1">My Academic Journey</p>
+        <h1 class="title">Education</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+
+                <!-- Undergraduate Education -->
+                <div class="details-container">
+
+                    <h2 class="experience-sub-title">Bachelor of Computer and Information Science</h2>
+                    <div class="article-container">
+                        <div style="text-align: center;">
+                            <img src="./assets/vc.png" alt="Imaad Kajee Profile Picture" style="max-width: 100%; height: auto;" />
+                        </div>
+                        <article>
+
+                            <div>
+                                <h3>IIE Varsity College, South Africa</h3>
+
+                                <p>2021 - 2024</p>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <h3>Programming Languages</h3>
+                                                                    <ul>
+                                                                        <li>Java</li>
+                                                                        <li>C#</li>
+                                                                        <li>Kotlin</li>
+                                                                    </ul>
+                                                                </div>
+</article>
+                        <article>
+                            <div>
+                                <h3>Web Development</h3>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>ASP.NET MVC</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <h3>Software Development</h3>
+                                <ul>
+                                    <li>GitHub</li>
+                                    <li>Problem-Solving abilities</li>
+                                    <li>Critical Thinking</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <h3>Database Management</h3>
+                                <ul>
+                                    <li>SQL</li>
+                                    <li>Firebase</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <h3>Cloud Computing</h3>
+                                <ul>
+                                    <li>Microsoft Azure</li>
+                                    <li>Firebase</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <h3>Project Management</h3>
+                                <ul>
+                                    <li>Management tools</li>
+                                    <li>Agile Methodologies</li>
+                                    <li>SDLC</li>
+                                    <li>Administrative skills</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <h3>Data Analysis</h3>
+                                <ul>
+                                    <li>Data Analysis</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <h3>Communication & Teamwork</h3>
+                                <ul>
+                                    <li>Verbal and Written Communication</li>
+                                    <li>Computer Literacy</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Centered image -->
+                    
+                </div>
+
+                <!-- High School Accomplishments (Placeholder for Table) -->
+                <div class="details-container">
+                    <h2 class="experience-sub-title">High School Accomplishments</h2>
+
+                    <div>
+                    <div style="text-align: center;">
+                        <img src="./assets/west.png" alt="Imaad Kajee Profile Picture" style="max-width: 100%; height: auto;" />
+                    </div>
+                    <div class="article-container">
+                        <!-- Table placeholder for High School -->
+                        <p>
+                            Westville Boys High School, South Africa
+                            2017 - 2021
+
+                            Activities and Societies: Tennis, Cricket, Soccer, Rugby, Computer Task Team
+
+                            My five years at Westville Boys High School were transformative, filled with opportunities for growth, camaraderie, and learning. From the outset, I embraced the vibrant school culture, forging lifelong friendships and finding joy in both academics and extracurricular activities.
+
+                            The school’s strong sense of brotherhood fostered lasting connections and a profound sense of belonging. Participating in sports like tennis, cricket, soccer, and rugby not only enhanced my athletic abilities but also taught me valuable lessons in teamwork, perseverance, and discipline. My involvement with the Computer Task Team allowed me to develop my technical skills and contribute to technology-driven initiatives, further strengthening my problem-solving abilities and leadership qualities.
+
+                            This enriching experience at Westville Boys High School played a pivotal role in shaping my character and values, equipping me with skills and cherished memories that continue to inspire and guide me today.
+                        </p>
+                    </div>
+                    <!-- Centered image -->
+                    <div style="text-align: center;">
+                        <img src="./assets/west.png" alt="Imaad Kajee Profile Picture" style="max-width: 100%; height: auto;" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/email.png"
+                     alt="Email Icon"
+                     class="icon contact-icon email-icon" />
+                <p>
+                    <a href="mailto:imaadkajee@gmail.com">imaadkajee@gmail.com</a>
+                </p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/linkedin.png"
+                     alt="LinkedIn Icon"
+                     class="icon contact-icon" />
+                <p>
+                    <a href="https://www.linkedin.com/in/imaad-kajee-aa557026a/">LinkedIn</a>
+                </p>
+            </div>
+            <!-- Phone Number Section -->
+            <div class="contact-info-container">
+                <img src="./assets/phone.png"
+                     alt="Phone Icon"
+                     class="icon contact-icon phone-icon" />
+                <p>
+                    <a href="tel:+1234567890">+27 84 877 8635</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>&copy; 2023 Imaad Kajee. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
